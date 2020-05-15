@@ -10,19 +10,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
+      - name: Checkout
+        uses: actions/checkout@master
 
-  deploy-oss:
-    runs-on: ubuntu-latest
-    steps:
-    - name: OSS
-      uses: manyuanrong/setup-ossutil@v1.0
-      with:
-        endpoint: "oss-cn-hangzhou.aliyuncs.com"
-        access-key-id: ${{secrets.AccessKey_ID}}
-        access-key-secret: ${{secrets.Access_Key_Secret}}
-    - run: ossutil cp -rf dist oss://jx3box-www/jx3box-lib
-    - run: ossutil cp -rf dist oss://jx3box/static/jx3box-lib
+      - name: OSS
+        uses: manyuanrong/setup-ossutil@v1.0
+        with:
+          endpoint: "oss-cn-hangzhou.aliyuncs.com"
+          access-key-id: ${{secrets.AccessKey_ID}}
+          access-key-secret: ${{secrets.Access_Key_Secret}}
+      - run: ossutil cp -rf dist oss://jx3box-www/jx3box-lib
+      - run: ossutil cp -rf dist oss://jx3box/static/jx3box-lib
