@@ -1,9 +1,9 @@
 {
   "name": "@jx3box/jx3box-lib",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "第三方依赖模块",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JX3BOX/jx3box-lib.git"
-  },
+  }
 }
