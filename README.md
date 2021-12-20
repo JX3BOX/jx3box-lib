@@ -1,5 +1,5 @@
 # Lib
-访问量一般的请使用CDN，访问量巨高的请使用CDN镜像
+访问量一般/需求稳定度高的请使用CDN，访问量巨高的请使用CDN镜像
 
 ## 源
 https://jx3box.github.io/jx3box-lib/dist/element.css
