@@ -1,15 +1,5 @@
-# This is a basic workflow to help you get started with Actions
-
 name: OSS
-
-# Controls when the action will run. Triggers the workflow on push or pull request 
-# events but only for the master branch
-on:
-  push
-#  release:
-#  branches: [ master ]
-#   pull_request:
-#     branches: [ master ]
+on: [push]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -17,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: manyuanrong/setup-ossutil@v1.0
+      - uses: manyuanrong/setup-ossutil@v2.0
         with:
           endpoint: "oss-cn-hangzhou.aliyuncs.com"
           access-key-id: ${{secrets.AccessKey_ID}}
