@@ -1,0 +1,23 @@
+<div class="layui-card-header">版本信息</div>
+<div class="layui-card-body layui-text layadmin-about">
+    <script type="text/html" template>
+        <p>当前版本：0.1.0</p>
+    </script>
+    <div class="layui-btn-container">
+        <a href="https://www.cnblogs.com/kuguats" target="_blank" class="layui-btn layui-btn-danger">作者博客</a>
+    </div>
+</div>
+
+<div class="layui-card-header">作者信息</div>
+<div class="layui-card-body layui-text layadmin-about">
+
+    <blockquote class="layui-elem-quote" style="border: none;">
+        Author: 苦瓜糖水<br>
+        QQ: 445786355<br>
+        Email: 445786355@qq.com<br>
+    </blockquote>
+    <p>© <span id="date_y">2020</span> <a href="https://www.cnblogs.com/kuguats" target="_blank">苦瓜糖水</a> 版权所有</p>
+    <script>
+        document.getElementById('date_y').innerHTML = (new Date()).getFullYear();
+    </script>
+</div>
